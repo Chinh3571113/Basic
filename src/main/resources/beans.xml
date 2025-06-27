@@ -1,0 +1,21 @@
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--                           http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+
+<!--    <bean id="studentService" class="com.example.service.StudentServiceImpl"/>-->
+<!--</beans>-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Định nghĩa Bean cho EmployeeDAO -->
+<bean id="employeeDAO" class="com.example.service.dao.NewEmployeeDAOImpl"/>
+
+<!-- Định nghĩa Bean cho EmployeeService với Setter Injection -->
+<bean id="employeeService" class="com.example.service.EmployeeService">
+    <property name="employeeDAO" ref="employeeDAO"/>
+</bean>
+</beans>
