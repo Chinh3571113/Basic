@@ -10,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Data
 @Entity
 public class Student {
@@ -28,13 +27,6 @@ public class Student {
 
     @Column( nullable = false)
     private  int age;
-
-//    public Student(Long id, String name, String email, int age) {
-//        this.id = id;
-//        this.name = name;
-//        this.email = email;
-//        this.age = age;
-//    }
 
     @JsonProperty
     public Long getId() {
